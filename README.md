@@ -1,7 +1,6 @@
-Slate
-========
+# Slate: Bigcommerce-customised version
 
-[![Build Status](https://travis-ci.org/tripit/slate.png?branch=master)](https://travis-ci.org/tripit/slate) [![Dependency Status](https://gemnasium.com/tripit/slate.png)](https://gemnasium.com/tripit/slate)
+### This is a Bigcommerce customised version of TripIt's Slate.<br>Logo, type and colours have been customised.
 
 Slate helps you create beautiful single-page API documentation. Think of it as an intelligent, modern documentation template for your API.
 
