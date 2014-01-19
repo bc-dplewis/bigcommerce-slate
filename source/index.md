@@ -4,35 +4,33 @@ title: API Reference
 language_tabs:
   - shell
   - ruby
-  - python
 
 toc_footers:
- - <a href='#'>Sign Up for a Developer Key</a>
- - <a href='http://github.com/tripit/slate'>Documentation Powered by Slate</a>
+-  <span>&copy;</span> Bigcommerce
 ---
 
 # Introduction
 
-Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.
+Welcome to the Bigcommerce Kitteh API.
 
-We have language bindings in Shell, Ruby, and Python! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.
+You can use our API to access Bigcommerce Kitteh API endpoints, which can get information on various cats, kittehs, and breeds in our database.
 
-This example API documentation page was created with [Slate](http://github.com/tripit/slate). Feel free to edit it and use it as a base for your own API's documentation.
+We have language bindings in Shell &amp; Ruby.
 
 # Authentication
 
 > To authorize, use this code:
 
 ```ruby
-require 'kittn'
+require 'kitteh'
 
-api = Kittn::APIClient.authorize!('meowmeowmeow')
+api = Bigcommerce::APIClient.authorize!('meowmeowmeow')
 ```
 
 ```python
-import 'kittn'
+import 'kitteh'
 
-api = Kittn.authorize('meowmeowmeow')
+api = Bigcommerce.authorize('meowmeowmeow')
 ```
 
 ```shell
@@ -43,9 +41,9 @@ curl "api_endpoint_here"
 
 > Make sure to replace `meowmeowmeow` with your API key.
 
-Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our [developer portal](http://example.com/developers).
+Bigcommerce uses API keys to allow access to the API. You can register a new Bigcommerce API key at our [developer portal](http://example.com/developers).
 
-Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:
+Bigcommerce expects for the API key to be included in all API requests to the server in a header that looks like the following:
 
 `Authorization: meowmeowmeow`
 
@@ -53,26 +51,26 @@ Kittn expects for the API key to be included in all API requests to the server i
 You must replace `meowmeowmeow` with your personal API key.
 </aside>
 
-# Kittens
+# Kittehs
 
-## Get All Kittens
+## Get All Kittehs
 
 ```ruby
-require 'kittn'
+require 'kitteh'
 
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-api.kittens.get
+api = Bigcommerce::APIClient.authorize!('meowmeowmeow')
+api.kittehs.get
 ```
 
 ```python
-import 'kittn'
+import 'kitteh'
 
-api = Kittn.authorize('meowmeowmeow')
-api.kittens.get()
+api = Bigcommerce.authorize('meowmeowmeow')
+api.kittehs.get()
 ```
 
 ```shell
-curl "http://example.com/api/kittens"
+curl "http://example.com/api/kittehs"
   -H "Authorization: meowmeowmeow"
 ```
 
@@ -97,41 +95,41 @@ curl "http://example.com/api/kittens"
 ]
 ```
 
-This endpoint retrieves all kittens.
+This endpoint retrieves all kittehs.
 
 ### HTTP Request
 
-`GET http://example.com/kittens`
+`GET http://example.com/kittehs`
 
 ### Query Parameters
 
 Parameter | Default | Description
 --------- | ------- | -----------
 include_cats | false | If set to true, the result will also include cats.
-available | true | If set to false, the result will include kittens that have already been adopted.
+available | true | If set to false, the result will include kittehs that have already been adopted.
 
 <aside class="success">
-Remember — a happy kitten is an authenticated kitten!
+Remember — a happy kitteh is an authenticated kitteh!
 </aside>
 
-## Get a Specific Kitten
+## Get a Specific Kitteh
 
 ```ruby
-require 'kittn'
+require 'kitteh'
 
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-api.kittens.get(2)
+api = Bigcommerce::APIClient.authorize!('meowmeowmeow')
+api.kittehs.get(2)
 ```
 
 ```python
-import 'kittn'
+import 'kitteh'
 
-api = Kittn.authorize('meowmeowmeow')
-api.kittens.get(2)
+api = Bigcommerce.authorize('meowmeowmeow')
+api.kittehs.get(2)
 ```
 
 ```shell
-curl "http://example.com/api/kittens/3"
+curl "http://example.com/api/kittehs/3"
   -H "Authorization: meowmeowmeow"
 ```
 
@@ -147,13 +145,13 @@ curl "http://example.com/api/kittens/3"
 }
 ```
 
-This endpoint retrieves a specific kitten.
+This endpoint retrieves a specific kitteh.
 
-<aside class="warning">If you're not using an administrator API key, note that some kittens will return 403 Forbidden if they are hidden for admins only.</aside>
+<aside class="warning">If you're not using an administrator API key, note that some kittehs will return 403 Forbidden if they are hidden for admins only.</aside>
 
 ### HTTP Request
 
-`GET http://example.com/kittens/<ID>`
+`GET http://example.com/kittehs/<ID>`
 
 ### URL Parameters
 
@@ -163,19 +161,19 @@ ID | The ID of the cat to retrieve
 
 # Errors
 
-The Kittn API uses the following error codes:
+The Bigcommerce API uses the following error codes:
 
 
 Error Code | Meaning
 ---------- | -------
 400 | Bad Request -- Your request sucks
 401 | Unauthorized -- Your API key is wrong
-403 | Forbidden -- The kitten requested is hidden for administrators only
-404 | Not Found -- The specified kitten could not be found
-405 | Method Not Allowed -- You tried to access a kitten with an invalid method
+403 | Forbidden -- The kitteh requested is hidden for administrators only
+404 | Not Found -- The specified kitteh could not be found
+405 | Method Not Allowed -- You tried to access a kitteh with an invalid method
 406 | Not Acceptable -- You requested a format that isn't json
-410 | Gone -- The kitten requested has been removed from our servers
+410 | Gone -- The kitteh requested has been removed from our servers
 418 | I'm a teapot
-429 | Too Many Requests -- You're requesting too many kittens! Slown down!
+429 | Too Many Requests -- You're requesting too many kittehs! Slown down!
 500 | Internal Server Error -- We had a problem with our server. Try again later.
 503 | Service Unavailable -- We're temporarially offline for maintanance. Please try again later.
