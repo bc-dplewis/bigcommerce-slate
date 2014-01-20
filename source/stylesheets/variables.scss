@@ -1,3 +1,23 @@
+@font-face {
+  font-family: "Open Sans";
+  src: url(font-path('opensans-regular.eot'));
+  src: url(font-path('opensans-regular.eot?#iefix')) format('eot'), url(font-path('opensans-regular.woff')) format('woff'), url(font-path('opensans-regular.ttf')) format('truetype'), url(font-path('opensans-regular.svg')) format('svg');
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url(font-path('opensans-light.eot'));
+  src: url(font-path('opensans-light.eot?#iefix')) format('eot'), url(font-path('opensans-light.woff')) format('woff'), url(font-path('opensans-light.ttf')) format('truetype'), url(font-path('opensans-light.svg')) format('svg');
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url(font-path('opensans-semibold.eot'));
+  src: url(font-path('opensans-semibold.eot?#iefix')) format('eot'), url(font-path('opensans-semibold.woff')) format('woff'), url(font-path('opensans-semibold.ttf')) format('truetype'), url(font-path('opensans-semibold.svg')) format('svg');
+  font-weight: 500;
+}
+
 /*
 Copyright 2008-2013 Concur Technologies, Inc.
 
@@ -23,20 +43,20 @@ under the License.
 
 // BACKGROUND COLORS
 ////////////////////
-$nav-bg: #393939;
-$examples-bg: #393939;
-$code-bg: #292929;
-$code-annotation-bg: #1c1c1c;
-$nav-subitem-bg: #262626;
-$nav-active-bg: #2467af;
+$nav-bg: #333d46;
+$examples-bg: darken(#333d46, 5%);
+$code-bg: darken(#333d46, 12%);
+$code-annotation-bg: darken(#333d46, 12%);
+$nav-subitem-bg: darken(#333d46, 12%);
+$nav-active-bg: darken(#333d46, 12%);
 $lang-select-border: #000;
 $lang-select-bg: #222;
 $lang-select-active-bg: $examples-bg; // feel free to change this to blue or something
 $lang-select-pressed-bg: #111; // color of language tab bg when mouse is pressed
-$main-bg: #eaf2f6;
-$aside-notice-bg: #8fbcd4;
-$aside-warning-bg: #c97a7e;
-$aside-success-bg: #6ac174;
+$main-bg: #fff;
+$aside-notice-bg: #b2e6ef;
+$aside-warning-bg: #ffdab2;
+$aside-success-bg: #bbd33f;
 
 
 // TEXT COLORS
@@ -64,13 +84,14 @@ $h1-margin-bottom: 21px; // padding under the largest header tags
 // FONTS
 ////////////////////
 %default-font {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 13px;
+
 }
 
 %header-font {
   @extend %default-font;
-  font-weight: bold;
+  font-weight: 200;
 }
 
 %code-font {
@@ -87,6 +108,11 @@ $nav-embossed-border-top: 1px solid #000;
 $nav-embossed-border-bottom: 1px solid #404040;
 $main-embossed-text-shadow: 0px 1px 0px #fff;
 
+
+// LOGO WIDTH OVERRIDE
+.tocify-wrapper > img {
+  max-width: 230px;
+}
 
 ////////////////////////////////////////////////////////////////////////////////
 // INTERNAL
